@@ -13,6 +13,7 @@ Test Teardown  End Web Test
 Check Units when Language is Dutch
    [Tags]  POC
     Intouch.Go to InTouch
+    Boindex.Choose NL
     Intouch.Log in to InTouch nl_be
 
     Menu.Parking Observations
@@ -21,6 +22,7 @@ Check Units when Language is Dutch
 Check Units when Language is English
    [Tags]  POC
     Intouch.Go to InTouch
+    BOindex.Choose EN
     Intouch.Log in to InTouch en_us
 
     Menu.Parking Observations
@@ -30,7 +32,8 @@ Check Units when Language is English
 Check Filters When language is Dutch
 
     Intouch.Go to InTouch
+    BOindex.Choose NL
     Intouch.Log in to InTouch nl_be
 
-    Menu.Parking Observation
+    Menu.Parking Observations
     Observations-nl_be.Check filters

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170204 15:46:32.440" generator="Robot 3.0.1 (Python 2.7.13 on win32)">
+<robot generated="20170204 15:56:05.518" generator="Robot 3.0.1 (Python 2.7.13 on win32)">
 <suite source="C:\development\robot-scripts\Intouch-Test\tests\IntouchPOC.robot" id="s1" name="IntouchPOC">
 <test id="s1-t1" name="Check Units when Language is Dutch">
 <kw type="setup" name="Begin Web Test" library="Common">
@@ -9,10 +9,10 @@
 <arg>about:blank</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20170204 15:46:33.010" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20170204 15:46:37.480" starttime="20170204 15:46:33.010"></status>
+<msg timestamp="20170204 15:56:05.647" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20170204 15:56:09.626" starttime="20170204 15:56:05.646"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:37.480" starttime="20170204 15:46:33.010"></status>
+<status status="PASS" endtime="20170204 15:56:09.626" starttime="20170204 15:56:05.646"></status>
 </kw>
 <kw name="Go to InTouch" library="InTouch">
 <kw name="Load login page" library="BOindex">
@@ -21,10 +21,10 @@
 <arguments>
 <arg>http://192.168.1.141</arg>
 </arguments>
-<msg timestamp="20170204 15:46:37.482" level="INFO">Opening url 'http://192.168.1.141'</msg>
-<status status="PASS" endtime="20170204 15:46:37.785" starttime="20170204 15:46:37.481"></status>
+<msg timestamp="20170204 15:56:09.629" level="INFO">Opening url 'http://192.168.1.141'</msg>
+<status status="PASS" endtime="20170204 15:56:09.934" starttime="20170204 15:56:09.629"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:37.785" starttime="20170204 15:46:37.481"></status>
+<status status="PASS" endtime="20170204 15:56:09.935" starttime="20170204 15:56:09.628"></status>
 </kw>
 <kw name="Verify page loaded" library="BOindex">
 <kw name="Wait Until Page Contains" library="ExtendedSelenium2Library">
@@ -32,13 +32,12 @@
 <arguments>
 <arg>Log in om door te gaan</arg>
 </arguments>
-<status status="PASS" endtime="20170204 15:46:37.802" starttime="20170204 15:46:37.785"></status>
+<status status="PASS" endtime="20170204 15:56:09.958" starttime="20170204 15:56:09.935"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:37.802" starttime="20170204 15:46:37.785"></status>
+<status status="PASS" endtime="20170204 15:56:09.959" starttime="20170204 15:56:09.935"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:37.802" starttime="20170204 15:46:37.481"></status>
+<status status="PASS" endtime="20170204 15:56:09.959" starttime="20170204 15:56:09.627"></status>
 </kw>
-<kw name="Log in to InTouch nl_be" library="InTouch">
 <kw name="Choose NL" library="BOindex">
 <kw name="Select From List By Value" library="ExtendedSelenium2Library">
 <doc>Selects ``*values`` from list identified by ``locator``.</doc>
@@ -46,11 +45,12 @@
 <arg>xpath=//*[@id="loginForm"]/div[3]/select</arg>
 <arg>nl_be</arg>
 </arguments>
-<msg timestamp="20170204 15:46:37.803" level="INFO">Selecting value(s) 'nl_be' from list 'xpath=//*[@id="loginForm"]/div[3]/select'.</msg>
-<status status="PASS" endtime="20170204 15:46:37.878" starttime="20170204 15:46:37.803"></status>
+<msg timestamp="20170204 15:56:09.960" level="INFO">Selecting value(s) 'nl_be' from list 'xpath=//*[@id="loginForm"]/div[3]/select'.</msg>
+<status status="PASS" endtime="20170204 15:56:10.037" starttime="20170204 15:56:09.959"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:37.878" starttime="20170204 15:46:37.803"></status>
+<status status="PASS" endtime="20170204 15:56:10.037" starttime="20170204 15:56:09.959"></status>
 </kw>
+<kw name="Log In to InTouch nl_be" library="InTouch">
 <kw name="Login" library="BOindex">
 <kw name="Input Text" library="ExtendedSelenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -58,8 +58,8 @@
 <arg>xpath=//*[@id="loginForm"]/div[1]/input</arg>
 <arg>kristofb@owner</arg>
 </arguments>
-<msg timestamp="20170204 15:46:37.879" level="INFO">Typing text 'kristofb@owner' into text field 'xpath=//*[@id="loginForm"]/div[1]/input'</msg>
-<status status="PASS" endtime="20170204 15:46:37.976" starttime="20170204 15:46:37.878"></status>
+<msg timestamp="20170204 15:56:10.038" level="INFO">Typing text 'kristofb@owner' into text field 'xpath=//*[@id="loginForm"]/div[1]/input'</msg>
+<status status="PASS" endtime="20170204 15:56:10.135" starttime="20170204 15:56:10.038"></status>
 </kw>
 <kw name="Input Text" library="ExtendedSelenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -67,27 +67,27 @@
 <arg>xpath=//*[@id="loginForm"]/div[2]/input</arg>
 <arg>Testing123</arg>
 </arguments>
-<msg timestamp="20170204 15:46:37.976" level="INFO">Typing text 'Testing123' into text field 'xpath=//*[@id="loginForm"]/div[2]/input'</msg>
-<status status="PASS" endtime="20170204 15:46:38.067" starttime="20170204 15:46:37.976"></status>
+<msg timestamp="20170204 15:56:10.136" level="INFO">Typing text 'Testing123' into text field 'xpath=//*[@id="loginForm"]/div[2]/input'</msg>
+<status status="PASS" endtime="20170204 15:56:10.228" starttime="20170204 15:56:10.136"></status>
 </kw>
 <kw name="Click Button" library="ExtendedSelenium2Library">
 <doc>Clicks a button identified by ``locator``.</doc>
 <arguments>
 <arg>id=btnLogin</arg>
 </arguments>
-<msg timestamp="20170204 15:46:38.067" level="INFO">Clicking button 'id=btnLogin'.</msg>
-<status status="PASS" endtime="20170204 15:46:40.878" starttime="20170204 15:46:38.067"></status>
+<msg timestamp="20170204 15:56:10.228" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" endtime="20170204 15:56:12.487" starttime="20170204 15:56:10.228"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:40.878" starttime="20170204 15:46:37.878"></status>
+<status status="PASS" endtime="20170204 15:56:12.487" starttime="20170204 15:56:10.037"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="ExtendedSelenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Welkom bij In Touch !</arg>
 </arguments>
-<status status="PASS" endtime="20170204 15:46:40.896" starttime="20170204 15:46:40.878"></status>
+<status status="PASS" endtime="20170204 15:56:12.505" starttime="20170204 15:56:12.488"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:40.897" starttime="20170204 15:46:37.803"></status>
+<status status="PASS" endtime="20170204 15:56:12.506" starttime="20170204 15:56:10.037"></status>
 </kw>
 <kw name="Parking Observations" library="Menu">
 <kw name="Click Link" library="ExtendedSelenium2Library">
@@ -95,18 +95,18 @@
 <arguments>
 <arg>id=menu_observations</arg>
 </arguments>
-<msg timestamp="20170204 15:46:40.898" level="INFO">Clicking link 'id=menu_observations'.</msg>
-<status status="PASS" endtime="20170204 15:46:41.487" starttime="20170204 15:46:40.897"></status>
+<msg timestamp="20170204 15:56:12.507" level="INFO">Clicking link 'id=menu_observations'.</msg>
+<status status="PASS" endtime="20170204 15:56:13.098" starttime="20170204 15:56:12.506"></status>
 </kw>
 <kw name="Click Link" library="ExtendedSelenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>id=menu_observations_parking_retribution</arg>
 </arguments>
-<msg timestamp="20170204 15:46:41.488" level="INFO">Clicking link 'id=menu_observations_parking_retribution'.</msg>
-<status status="PASS" endtime="20170204 15:46:42.975" starttime="20170204 15:46:41.487"></status>
+<msg timestamp="20170204 15:56:13.098" level="INFO">Clicking link 'id=menu_observations_parking_retribution'.</msg>
+<status status="PASS" endtime="20170204 15:56:14.476" starttime="20170204 15:56:13.098"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:42.976" starttime="20170204 15:46:40.897"></status>
+<status status="PASS" endtime="20170204 15:56:14.476" starttime="20170204 15:56:12.506"></status>
 </kw>
 <kw name="Check content of Unit dropdown" library="Observations-nl_be">
 <kw name="Click Element" library="ExtendedSelenium2Library">
@@ -114,16 +114,16 @@
 <arguments>
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]</arg>
 </arguments>
-<msg timestamp="20170204 15:46:42.977" level="INFO">Clicking element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]'.</msg>
-<status status="PASS" endtime="20170204 15:46:43.594" starttime="20170204 15:46:42.977"></status>
+<msg timestamp="20170204 15:56:14.477" level="INFO">Clicking element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]'.</msg>
+<status status="PASS" endtime="20170204 15:56:15.068" starttime="20170204 15:56:14.477"></status>
 </kw>
 <kw name="Click Link" library="ExtendedSelenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>id=id_UNITS_ID_1</arg>
 </arguments>
-<msg timestamp="20170204 15:46:43.595" level="INFO">Clicking link 'id=id_UNITS_ID_1'.</msg>
-<status status="PASS" endtime="20170204 15:46:44.202" starttime="20170204 15:46:43.594"></status>
+<msg timestamp="20170204 15:56:15.068" level="INFO">Clicking link 'id=id_UNITS_ID_1'.</msg>
+<status status="PASS" endtime="20170204 15:56:15.676" starttime="20170204 15:56:15.068"></status>
 </kw>
 <kw name="Wait Until Element Contains" library="ExtendedSelenium2Library">
 <doc>Waits until given element contains `text`.</doc>
@@ -131,15 +131,15 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]</arg>
 <arg>Kortrijk</arg>
 </arguments>
-<status status="PASS" endtime="20170204 15:46:44.234" starttime="20170204 15:46:44.203"></status>
+<status status="PASS" endtime="20170204 15:56:15.717" starttime="20170204 15:56:15.676"></status>
 </kw>
 <kw name="Click Link" library="ExtendedSelenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>id=id_UNITS_ID_2</arg>
 </arguments>
-<msg timestamp="20170204 15:46:44.234" level="INFO">Clicking link 'id=id_UNITS_ID_2'.</msg>
-<status status="PASS" endtime="20170204 15:46:44.855" starttime="20170204 15:46:44.234"></status>
+<msg timestamp="20170204 15:56:15.718" level="INFO">Clicking link 'id=id_UNITS_ID_2'.</msg>
+<status status="PASS" endtime="20170204 15:56:16.324" starttime="20170204 15:56:15.717"></status>
 </kw>
 <kw name="Wait Until Element Contains" library="ExtendedSelenium2Library">
 <doc>Waits until given element contains `text`.</doc>
@@ -147,15 +147,15 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]</arg>
 <arg>Kuurne</arg>
 </arguments>
-<status status="PASS" endtime="20170204 15:46:44.885" starttime="20170204 15:46:44.855"></status>
+<status status="PASS" endtime="20170204 15:56:16.361" starttime="20170204 15:56:16.324"></status>
 </kw>
 <kw name="Click Link" library="ExtendedSelenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>id=id_UNITS_ID_3</arg>
 </arguments>
-<msg timestamp="20170204 15:46:44.885" level="INFO">Clicking link 'id=id_UNITS_ID_3'.</msg>
-<status status="PASS" endtime="20170204 15:46:45.477" starttime="20170204 15:46:44.885"></status>
+<msg timestamp="20170204 15:56:16.362" level="INFO">Clicking link 'id=id_UNITS_ID_3'.</msg>
+<status status="PASS" endtime="20170204 15:56:16.980" starttime="20170204 15:56:16.361"></status>
 </kw>
 <kw name="Wait Until Element Contains" library="ExtendedSelenium2Library">
 <doc>Waits until given element contains `text`.</doc>
@@ -163,15 +163,15 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]</arg>
 <arg>Lendelede</arg>
 </arguments>
-<status status="PASS" endtime="20170204 15:46:45.498" starttime="20170204 15:46:45.477"></status>
+<status status="PASS" endtime="20170204 15:56:17.000" starttime="20170204 15:56:16.980"></status>
 </kw>
 <kw name="Click Link" library="ExtendedSelenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>id=id_UNITS_ID_#UNITS_ID#</arg>
 </arguments>
-<msg timestamp="20170204 15:46:45.498" level="INFO">Clicking link 'id=id_UNITS_ID_#UNITS_ID#'.</msg>
-<status status="PASS" endtime="20170204 15:46:46.089" starttime="20170204 15:46:45.498"></status>
+<msg timestamp="20170204 15:56:17.001" level="INFO">Clicking link 'id=id_UNITS_ID_#UNITS_ID#'.</msg>
+<status status="PASS" endtime="20170204 15:56:17.596" starttime="20170204 15:56:17.000"></status>
 </kw>
 <kw name="Wait Until Element Contains" library="ExtendedSelenium2Library">
 <doc>Waits until given element contains `text`.</doc>
@@ -179,21 +179,21 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]</arg>
 <arg>Alle</arg>
 </arguments>
-<status status="PASS" endtime="20170204 15:46:46.108" starttime="20170204 15:46:46.089"></status>
+<status status="PASS" endtime="20170204 15:56:17.617" starttime="20170204 15:56:17.596"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:46.108" starttime="20170204 15:46:42.976"></status>
+<status status="PASS" endtime="20170204 15:56:17.617" starttime="20170204 15:56:14.477"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="Common">
 <kw name="Close Browser" library="ExtendedSelenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170204 15:46:49.189" starttime="20170204 15:46:46.109"></status>
+<status status="PASS" endtime="20170204 15:56:20.712" starttime="20170204 15:56:17.618"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:49.189" starttime="20170204 15:46:46.109"></status>
+<status status="PASS" endtime="20170204 15:56:20.712" starttime="20170204 15:56:17.618"></status>
 </kw>
 <tags>
 <tag>POC</tag>
 </tags>
-<status status="PASS" endtime="20170204 15:46:49.190" critical="yes" starttime="20170204 15:46:33.009"></status>
+<status status="PASS" endtime="20170204 15:56:20.713" critical="yes" starttime="20170204 15:56:05.645"></status>
 </test>
 <test id="s1-t2" name="Check Units when Language is English">
 <kw type="setup" name="Begin Web Test" library="Common">
@@ -203,10 +203,10 @@
 <arg>about:blank</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20170204 15:46:49.195" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20170204 15:46:53.151" starttime="20170204 15:46:49.195"></status>
+<msg timestamp="20170204 15:56:20.719" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20170204 15:56:24.668" starttime="20170204 15:56:20.718"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:53.152" starttime="20170204 15:46:49.194"></status>
+<status status="PASS" endtime="20170204 15:56:24.669" starttime="20170204 15:56:20.718"></status>
 </kw>
 <kw name="Go to InTouch" library="InTouch">
 <kw name="Load login page" library="BOindex">
@@ -215,10 +215,10 @@
 <arguments>
 <arg>http://192.168.1.141</arg>
 </arguments>
-<msg timestamp="20170204 15:46:53.153" level="INFO">Opening url 'http://192.168.1.141'</msg>
-<status status="PASS" endtime="20170204 15:46:53.478" starttime="20170204 15:46:53.153"></status>
+<msg timestamp="20170204 15:56:24.670" level="INFO">Opening url 'http://192.168.1.141'</msg>
+<status status="PASS" endtime="20170204 15:56:24.969" starttime="20170204 15:56:24.670"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:53.478" starttime="20170204 15:46:53.153"></status>
+<status status="PASS" endtime="20170204 15:56:24.969" starttime="20170204 15:56:24.670"></status>
 </kw>
 <kw name="Verify page loaded" library="BOindex">
 <kw name="Wait Until Page Contains" library="ExtendedSelenium2Library">
@@ -226,13 +226,12 @@
 <arguments>
 <arg>Log in om door te gaan</arg>
 </arguments>
-<status status="PASS" endtime="20170204 15:46:53.497" starttime="20170204 15:46:53.478"></status>
+<status status="PASS" endtime="20170204 15:56:24.986" starttime="20170204 15:56:24.969"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:53.497" starttime="20170204 15:46:53.478"></status>
+<status status="PASS" endtime="20170204 15:56:24.986" starttime="20170204 15:56:24.969"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:53.497" starttime="20170204 15:46:53.152"></status>
+<status status="PASS" endtime="20170204 15:56:24.986" starttime="20170204 15:56:24.669"></status>
 </kw>
-<kw name="Log In to InTouch en_us" library="InTouch">
 <kw name="Choose EN" library="BOindex">
 <kw name="Select From List By Value" library="ExtendedSelenium2Library">
 <doc>Selects ``*values`` from list identified by ``locator``.</doc>
@@ -240,11 +239,12 @@
 <arg>xpath=//*[@id="loginForm"]/div[3]/select</arg>
 <arg>en_us</arg>
 </arguments>
-<msg timestamp="20170204 15:46:53.498" level="INFO">Selecting value(s) 'en_us' from list 'xpath=//*[@id="loginForm"]/div[3]/select'.</msg>
-<status status="PASS" endtime="20170204 15:46:53.608" starttime="20170204 15:46:53.498"></status>
+<msg timestamp="20170204 15:56:24.988" level="INFO">Selecting value(s) 'en_us' from list 'xpath=//*[@id="loginForm"]/div[3]/select'.</msg>
+<status status="PASS" endtime="20170204 15:56:25.094" starttime="20170204 15:56:24.988"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:53.608" starttime="20170204 15:46:53.498"></status>
+<status status="PASS" endtime="20170204 15:56:25.094" starttime="20170204 15:56:24.987"></status>
 </kw>
+<kw name="Log In to InTouch en_us" library="InTouch">
 <kw name="Login" library="BOindex">
 <kw name="Input Text" library="ExtendedSelenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -252,8 +252,8 @@
 <arg>xpath=//*[@id="loginForm"]/div[1]/input</arg>
 <arg>kristofb@owner</arg>
 </arguments>
-<msg timestamp="20170204 15:46:53.608" level="INFO">Typing text 'kristofb@owner' into text field 'xpath=//*[@id="loginForm"]/div[1]/input'</msg>
-<status status="PASS" endtime="20170204 15:46:53.708" starttime="20170204 15:46:53.608"></status>
+<msg timestamp="20170204 15:56:25.095" level="INFO">Typing text 'kristofb@owner' into text field 'xpath=//*[@id="loginForm"]/div[1]/input'</msg>
+<status status="PASS" endtime="20170204 15:56:25.190" starttime="20170204 15:56:25.095"></status>
 </kw>
 <kw name="Input Text" library="ExtendedSelenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -261,27 +261,27 @@
 <arg>xpath=//*[@id="loginForm"]/div[2]/input</arg>
 <arg>Testing123</arg>
 </arguments>
-<msg timestamp="20170204 15:46:53.709" level="INFO">Typing text 'Testing123' into text field 'xpath=//*[@id="loginForm"]/div[2]/input'</msg>
-<status status="PASS" endtime="20170204 15:46:53.796" starttime="20170204 15:46:53.708"></status>
+<msg timestamp="20170204 15:56:25.190" level="INFO">Typing text 'Testing123' into text field 'xpath=//*[@id="loginForm"]/div[2]/input'</msg>
+<status status="PASS" endtime="20170204 15:56:25.281" starttime="20170204 15:56:25.190"></status>
 </kw>
 <kw name="Click Button" library="ExtendedSelenium2Library">
 <doc>Clicks a button identified by ``locator``.</doc>
 <arguments>
 <arg>id=btnLogin</arg>
 </arguments>
-<msg timestamp="20170204 15:46:53.796" level="INFO">Clicking button 'id=btnLogin'.</msg>
-<status status="PASS" endtime="20170204 15:46:54.547" starttime="20170204 15:46:53.796"></status>
+<msg timestamp="20170204 15:56:25.282" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" endtime="20170204 15:56:27.274" starttime="20170204 15:56:25.282"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:54.547" starttime="20170204 15:46:53.608"></status>
+<status status="PASS" endtime="20170204 15:56:27.274" starttime="20170204 15:56:25.095"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="ExtendedSelenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Welcome to In Touch !</arg>
 </arguments>
-<status status="PASS" endtime="20170204 15:46:55.229" starttime="20170204 15:46:54.548"></status>
+<status status="PASS" endtime="20170204 15:56:27.315" starttime="20170204 15:56:27.274"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:55.230" starttime="20170204 15:46:53.498"></status>
+<status status="PASS" endtime="20170204 15:56:27.315" starttime="20170204 15:56:25.095"></status>
 </kw>
 <kw name="Parking Observations" library="Menu">
 <kw name="Click Link" library="ExtendedSelenium2Library">
@@ -289,18 +289,18 @@
 <arguments>
 <arg>id=menu_observations</arg>
 </arguments>
-<msg timestamp="20170204 15:46:55.236" level="INFO">Clicking link 'id=menu_observations'.</msg>
-<status status="PASS" endtime="20170204 15:46:56.109" starttime="20170204 15:46:55.236"></status>
+<msg timestamp="20170204 15:56:27.319" level="INFO">Clicking link 'id=menu_observations'.</msg>
+<status status="PASS" endtime="20170204 15:56:27.924" starttime="20170204 15:56:27.319"></status>
 </kw>
 <kw name="Click Link" library="ExtendedSelenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>id=menu_observations_parking_retribution</arg>
 </arguments>
-<msg timestamp="20170204 15:46:56.109" level="INFO">Clicking link 'id=menu_observations_parking_retribution'.</msg>
-<status status="PASS" endtime="20170204 15:46:57.625" starttime="20170204 15:46:56.109"></status>
+<msg timestamp="20170204 15:56:27.925" level="INFO">Clicking link 'id=menu_observations_parking_retribution'.</msg>
+<status status="PASS" endtime="20170204 15:56:29.226" starttime="20170204 15:56:27.925"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:57.625" starttime="20170204 15:46:55.235"></status>
+<status status="PASS" endtime="20170204 15:56:29.226" starttime="20170204 15:56:27.318"></status>
 </kw>
 <kw name="Check label of Unit" library="Observations-en_us">
 <kw name="Element Should Contain" library="ExtendedSelenium2Library">
@@ -309,10 +309,10 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/label</arg>
 <arg>Subarea</arg>
 </arguments>
-<msg timestamp="20170204 15:46:57.627" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/label' contains text 'Subarea'.</msg>
-<status status="PASS" endtime="20170204 15:46:57.665" starttime="20170204 15:46:57.627"></status>
+<msg timestamp="20170204 15:56:29.227" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/label' contains text 'Subarea'.</msg>
+<status status="PASS" endtime="20170204 15:56:29.265" starttime="20170204 15:56:29.227"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:46:57.665" starttime="20170204 15:46:57.627"></status>
+<status status="PASS" endtime="20170204 15:56:29.265" starttime="20170204 15:56:29.227"></status>
 </kw>
 <kw name="Check content of Unit dropdown" library="Observations-en_us">
 <kw name="Click Element" library="ExtendedSelenium2Library">
@@ -320,16 +320,16 @@
 <arguments>
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]</arg>
 </arguments>
-<msg timestamp="20170204 15:46:57.667" level="INFO">Clicking element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]'.</msg>
-<status status="PASS" endtime="20170204 15:46:58.293" starttime="20170204 15:46:57.667"></status>
+<msg timestamp="20170204 15:56:29.266" level="INFO">Clicking element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]'.</msg>
+<status status="PASS" endtime="20170204 15:56:29.868" starttime="20170204 15:56:29.266"></status>
 </kw>
 <kw name="Click Link" library="ExtendedSelenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>id=id_UNITS_ID_1</arg>
 </arguments>
-<msg timestamp="20170204 15:46:58.294" level="INFO">Clicking link 'id=id_UNITS_ID_1'.</msg>
-<status status="PASS" endtime="20170204 15:46:58.931" starttime="20170204 15:46:58.294"></status>
+<msg timestamp="20170204 15:56:29.869" level="INFO">Clicking link 'id=id_UNITS_ID_1'.</msg>
+<status status="PASS" endtime="20170204 15:56:30.478" starttime="20170204 15:56:29.868"></status>
 </kw>
 <kw name="Wait Until Element Contains" library="ExtendedSelenium2Library">
 <doc>Waits until given element contains `text`.</doc>
@@ -337,15 +337,15 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]</arg>
 <arg>Kortrijk</arg>
 </arguments>
-<status status="PASS" endtime="20170204 15:46:58.971" starttime="20170204 15:46:58.931"></status>
+<status status="PASS" endtime="20170204 15:56:30.509" starttime="20170204 15:56:30.478"></status>
 </kw>
 <kw name="Click Link" library="ExtendedSelenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>id=id_UNITS_ID_2</arg>
 </arguments>
-<msg timestamp="20170204 15:46:58.971" level="INFO">Clicking link 'id=id_UNITS_ID_2'.</msg>
-<status status="PASS" endtime="20170204 15:46:59.590" starttime="20170204 15:46:58.971"></status>
+<msg timestamp="20170204 15:56:30.509" level="INFO">Clicking link 'id=id_UNITS_ID_2'.</msg>
+<status status="PASS" endtime="20170204 15:56:31.097" starttime="20170204 15:56:30.509"></status>
 </kw>
 <kw name="Wait Until Element Contains" library="ExtendedSelenium2Library">
 <doc>Waits until given element contains `text`.</doc>
@@ -353,15 +353,15 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]</arg>
 <arg>Kuurne</arg>
 </arguments>
-<status status="PASS" endtime="20170204 15:46:59.618" starttime="20170204 15:46:59.591"></status>
+<status status="PASS" endtime="20170204 15:56:31.118" starttime="20170204 15:56:31.097"></status>
 </kw>
 <kw name="Click Link" library="ExtendedSelenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>id=id_UNITS_ID_3</arg>
 </arguments>
-<msg timestamp="20170204 15:46:59.618" level="INFO">Clicking link 'id=id_UNITS_ID_3'.</msg>
-<status status="PASS" endtime="20170204 15:47:00.207" starttime="20170204 15:46:59.618"></status>
+<msg timestamp="20170204 15:56:31.118" level="INFO">Clicking link 'id=id_UNITS_ID_3'.</msg>
+<status status="PASS" endtime="20170204 15:56:31.706" starttime="20170204 15:56:31.118"></status>
 </kw>
 <kw name="Wait Until Element Contains" library="ExtendedSelenium2Library">
 <doc>Waits until given element contains `text`.</doc>
@@ -369,15 +369,15 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]</arg>
 <arg>Lendelede</arg>
 </arguments>
-<status status="PASS" endtime="20170204 15:47:00.226" starttime="20170204 15:47:00.207"></status>
+<status status="PASS" endtime="20170204 15:56:31.726" starttime="20170204 15:56:31.706"></status>
 </kw>
 <kw name="Click Link" library="ExtendedSelenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>id=id_UNITS_ID_#UNITS_ID#</arg>
 </arguments>
-<msg timestamp="20170204 15:47:00.227" level="INFO">Clicking link 'id=id_UNITS_ID_#UNITS_ID#'.</msg>
-<status status="PASS" endtime="20170204 15:47:00.832" starttime="20170204 15:47:00.227"></status>
+<msg timestamp="20170204 15:56:31.727" level="INFO">Clicking link 'id=id_UNITS_ID_#UNITS_ID#'.</msg>
+<status status="PASS" endtime="20170204 15:56:32.317" starttime="20170204 15:56:31.726"></status>
 </kw>
 <kw name="Wait Until Element Contains" library="ExtendedSelenium2Library">
 <doc>Waits until given element contains `text`.</doc>
@@ -385,21 +385,21 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]</arg>
 <arg>All</arg>
 </arguments>
-<status status="PASS" endtime="20170204 15:47:00.866" starttime="20170204 15:47:00.832"></status>
+<status status="PASS" endtime="20170204 15:56:32.341" starttime="20170204 15:56:32.317"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:00.866" starttime="20170204 15:46:57.666"></status>
+<status status="PASS" endtime="20170204 15:56:32.341" starttime="20170204 15:56:29.266"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="Common">
 <kw name="Close Browser" library="ExtendedSelenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170204 15:47:03.988" starttime="20170204 15:47:00.868"></status>
+<status status="PASS" endtime="20170204 15:56:35.442" starttime="20170204 15:56:32.342"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:03.989" starttime="20170204 15:47:00.867"></status>
+<status status="PASS" endtime="20170204 15:56:35.443" starttime="20170204 15:56:32.342"></status>
 </kw>
 <tags>
 <tag>POC</tag>
 </tags>
-<status status="PASS" endtime="20170204 15:47:03.989" critical="yes" starttime="20170204 15:46:49.193"></status>
+<status status="PASS" endtime="20170204 15:56:35.444" critical="yes" starttime="20170204 15:56:20.716"></status>
 </test>
 <test id="s1-t3" name="Check Filters When language is Dutch">
 <kw type="setup" name="Begin Web Test" library="Common">
@@ -409,10 +409,10 @@
 <arg>about:blank</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20170204 15:47:03.992" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20170204 15:47:07.961" starttime="20170204 15:47:03.992"></status>
+<msg timestamp="20170204 15:56:35.450" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20170204 15:56:39.352" starttime="20170204 15:56:35.450"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:07.961" starttime="20170204 15:47:03.991"></status>
+<status status="PASS" endtime="20170204 15:56:39.352" starttime="20170204 15:56:35.449"></status>
 </kw>
 <kw name="Go to InTouch" library="InTouch">
 <kw name="Load login page" library="BOindex">
@@ -421,10 +421,10 @@
 <arguments>
 <arg>http://192.168.1.141</arg>
 </arguments>
-<msg timestamp="20170204 15:47:07.962" level="INFO">Opening url 'http://192.168.1.141'</msg>
-<status status="PASS" endtime="20170204 15:47:08.294" starttime="20170204 15:47:07.962"></status>
+<msg timestamp="20170204 15:56:39.354" level="INFO">Opening url 'http://192.168.1.141'</msg>
+<status status="PASS" endtime="20170204 15:56:39.661" starttime="20170204 15:56:39.354"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:08.295" starttime="20170204 15:47:07.962"></status>
+<status status="PASS" endtime="20170204 15:56:39.662" starttime="20170204 15:56:39.354"></status>
 </kw>
 <kw name="Verify page loaded" library="BOindex">
 <kw name="Wait Until Page Contains" library="ExtendedSelenium2Library">
@@ -432,13 +432,12 @@
 <arguments>
 <arg>Log in om door te gaan</arg>
 </arguments>
-<status status="PASS" endtime="20170204 15:47:08.313" starttime="20170204 15:47:08.295"></status>
+<status status="PASS" endtime="20170204 15:56:39.685" starttime="20170204 15:56:39.662"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:08.313" starttime="20170204 15:47:08.295"></status>
+<status status="PASS" endtime="20170204 15:56:39.685" starttime="20170204 15:56:39.662"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:08.313" starttime="20170204 15:47:07.962"></status>
+<status status="PASS" endtime="20170204 15:56:39.685" starttime="20170204 15:56:39.353"></status>
 </kw>
-<kw name="Log in to InTouch nl_be" library="InTouch">
 <kw name="Choose NL" library="BOindex">
 <kw name="Select From List By Value" library="ExtendedSelenium2Library">
 <doc>Selects ``*values`` from list identified by ``locator``.</doc>
@@ -446,11 +445,12 @@
 <arg>xpath=//*[@id="loginForm"]/div[3]/select</arg>
 <arg>nl_be</arg>
 </arguments>
-<msg timestamp="20170204 15:47:08.315" level="INFO">Selecting value(s) 'nl_be' from list 'xpath=//*[@id="loginForm"]/div[3]/select'.</msg>
-<status status="PASS" endtime="20170204 15:47:08.386" starttime="20170204 15:47:08.315"></status>
+<msg timestamp="20170204 15:56:39.686" level="INFO">Selecting value(s) 'nl_be' from list 'xpath=//*[@id="loginForm"]/div[3]/select'.</msg>
+<status status="PASS" endtime="20170204 15:56:39.764" starttime="20170204 15:56:39.686"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:08.386" starttime="20170204 15:47:08.315"></status>
+<status status="PASS" endtime="20170204 15:56:39.764" starttime="20170204 15:56:39.686"></status>
 </kw>
+<kw name="Log In to InTouch nl_be" library="InTouch">
 <kw name="Login" library="BOindex">
 <kw name="Input Text" library="ExtendedSelenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -458,8 +458,8 @@
 <arg>xpath=//*[@id="loginForm"]/div[1]/input</arg>
 <arg>kristofb@owner</arg>
 </arguments>
-<msg timestamp="20170204 15:47:08.386" level="INFO">Typing text 'kristofb@owner' into text field 'xpath=//*[@id="loginForm"]/div[1]/input'</msg>
-<status status="PASS" endtime="20170204 15:47:08.479" starttime="20170204 15:47:08.386"></status>
+<msg timestamp="20170204 15:56:39.766" level="INFO">Typing text 'kristofb@owner' into text field 'xpath=//*[@id="loginForm"]/div[1]/input'</msg>
+<status status="PASS" endtime="20170204 15:56:39.864" starttime="20170204 15:56:39.766"></status>
 </kw>
 <kw name="Input Text" library="ExtendedSelenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -467,46 +467,46 @@
 <arg>xpath=//*[@id="loginForm"]/div[2]/input</arg>
 <arg>Testing123</arg>
 </arguments>
-<msg timestamp="20170204 15:47:08.480" level="INFO">Typing text 'Testing123' into text field 'xpath=//*[@id="loginForm"]/div[2]/input'</msg>
-<status status="PASS" endtime="20170204 15:47:08.564" starttime="20170204 15:47:08.480"></status>
+<msg timestamp="20170204 15:56:39.864" level="INFO">Typing text 'Testing123' into text field 'xpath=//*[@id="loginForm"]/div[2]/input'</msg>
+<status status="PASS" endtime="20170204 15:56:39.956" starttime="20170204 15:56:39.864"></status>
 </kw>
 <kw name="Click Button" library="ExtendedSelenium2Library">
 <doc>Clicks a button identified by ``locator``.</doc>
 <arguments>
 <arg>id=btnLogin</arg>
 </arguments>
-<msg timestamp="20170204 15:47:08.564" level="INFO">Clicking button 'id=btnLogin'.</msg>
-<status status="PASS" endtime="20170204 15:47:10.595" starttime="20170204 15:47:08.564"></status>
+<msg timestamp="20170204 15:56:39.957" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" endtime="20170204 15:56:42.207" starttime="20170204 15:56:39.956"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:10.595" starttime="20170204 15:47:08.386"></status>
+<status status="PASS" endtime="20170204 15:56:42.207" starttime="20170204 15:56:39.765"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="ExtendedSelenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Welkom bij In Touch !</arg>
 </arguments>
-<status status="PASS" endtime="20170204 15:47:10.634" starttime="20170204 15:47:10.596"></status>
+<status status="PASS" endtime="20170204 15:56:42.229" starttime="20170204 15:56:42.207"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:10.635" starttime="20170204 15:47:08.314"></status>
+<status status="PASS" endtime="20170204 15:56:42.229" starttime="20170204 15:56:39.765"></status>
 </kw>
-<kw name="Go to Parking Observations" library="InTouch">
+<kw name="Parking Observations" library="Menu">
 <kw name="Click Link" library="ExtendedSelenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>id=menu_observations</arg>
 </arguments>
-<msg timestamp="20170204 15:47:10.637" level="INFO">Clicking link 'id=menu_observations'.</msg>
-<status status="PASS" endtime="20170204 15:47:11.258" starttime="20170204 15:47:10.636"></status>
+<msg timestamp="20170204 15:56:42.230" level="INFO">Clicking link 'id=menu_observations'.</msg>
+<status status="PASS" endtime="20170204 15:56:42.837" starttime="20170204 15:56:42.230"></status>
 </kw>
 <kw name="Click Link" library="ExtendedSelenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>id=menu_observations_parking_retribution</arg>
 </arguments>
-<msg timestamp="20170204 15:47:11.258" level="INFO">Clicking link 'id=menu_observations_parking_retribution'.</msg>
-<status status="PASS" endtime="20170204 15:47:12.821" starttime="20170204 15:47:11.258"></status>
+<msg timestamp="20170204 15:56:42.838" level="INFO">Clicking link 'id=menu_observations_parking_retribution'.</msg>
+<status status="PASS" endtime="20170204 15:56:44.219" starttime="20170204 15:56:42.838"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:12.821" starttime="20170204 15:47:10.636"></status>
+<status status="PASS" endtime="20170204 15:56:44.219" starttime="20170204 15:56:42.230"></status>
 </kw>
 <kw name="Check Filters" library="Observations-nl_be">
 <kw name="Deelgebied" library="Observations-nl_be">
@@ -516,10 +516,10 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]</arg>
 <arg>Deelgebied</arg>
 </arguments>
-<msg timestamp="20170204 15:47:12.823" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]' contains text 'Deelgebied'.</msg>
-<status status="PASS" endtime="20170204 15:47:12.955" starttime="20170204 15:47:12.823"></status>
+<msg timestamp="20170204 15:56:44.220" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]' contains text 'Deelgebied'.</msg>
+<status status="PASS" endtime="20170204 15:56:44.343" starttime="20170204 15:56:44.220"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:12.955" starttime="20170204 15:47:12.822"></status>
+<status status="PASS" endtime="20170204 15:56:44.343" starttime="20170204 15:56:44.220"></status>
 </kw>
 <kw name="Referentie" library="Observations-nl_be">
 <kw name="Element Should Contain" library="ExtendedSelenium2Library">
@@ -528,10 +528,10 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[2]/div/div/label</arg>
 <arg>Referentie</arg>
 </arguments>
-<msg timestamp="20170204 15:47:12.956" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[2]/div/div/label' contains text 'Referentie'.</msg>
-<status status="PASS" endtime="20170204 15:47:12.999" starttime="20170204 15:47:12.956"></status>
+<msg timestamp="20170204 15:56:44.344" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[2]/div/div/label' contains text 'Referentie'.</msg>
+<status status="PASS" endtime="20170204 15:56:44.377" starttime="20170204 15:56:44.344"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:12.999" starttime="20170204 15:47:12.955"></status>
+<status status="PASS" endtime="20170204 15:56:44.378" starttime="20170204 15:56:44.344"></status>
 </kw>
 <kw name="Kenteken" library="Observations-nl_be">
 <kw name="Element Should Contain" library="ExtendedSelenium2Library">
@@ -540,10 +540,10 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[3]/div/div/label</arg>
 <arg>Kenteken</arg>
 </arguments>
-<msg timestamp="20170204 15:47:13.000" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[3]/div/div/label' contains text 'Kenteken'.</msg>
-<status status="PASS" endtime="20170204 15:47:13.036" starttime="20170204 15:47:13.000"></status>
+<msg timestamp="20170204 15:56:44.378" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[3]/div/div/label' contains text 'Kenteken'.</msg>
+<status status="PASS" endtime="20170204 15:56:44.418" starttime="20170204 15:56:44.378"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:13.036" starttime="20170204 15:47:12.999"></status>
+<status status="PASS" endtime="20170204 15:56:44.418" starttime="20170204 15:56:44.378"></status>
 </kw>
 <kw name="Nationaliteit voertuig" library="Observations-nl_be">
 <kw name="Element Should Contain" library="ExtendedSelenium2Library">
@@ -552,10 +552,10 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[4]/div/div/label</arg>
 <arg>Nationaliteit voertuig</arg>
 </arguments>
-<msg timestamp="20170204 15:47:13.036" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[4]/div/div/label' contains text 'Nationaliteit voertuig'.</msg>
-<status status="PASS" endtime="20170204 15:47:13.070" starttime="20170204 15:47:13.036"></status>
+<msg timestamp="20170204 15:56:44.418" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[4]/div/div/label' contains text 'Nationaliteit voertuig'.</msg>
+<status status="PASS" endtime="20170204 15:56:44.450" starttime="20170204 15:56:44.418"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:13.071" starttime="20170204 15:47:13.036"></status>
+<status status="PASS" endtime="20170204 15:56:44.451" starttime="20170204 15:56:44.418"></status>
 </kw>
 <kw name="Status" library="Observations-nl_be">
 <kw name="Element Should Contain" library="ExtendedSelenium2Library">
@@ -564,10 +564,10 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[5]/div/div/label</arg>
 <arg>Status</arg>
 </arguments>
-<msg timestamp="20170204 15:47:13.071" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[5]/div/div/label' contains text 'Status'.</msg>
-<status status="PASS" endtime="20170204 15:47:13.105" starttime="20170204 15:47:13.071"></status>
+<msg timestamp="20170204 15:56:44.451" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[5]/div/div/label' contains text 'Status'.</msg>
+<status status="PASS" endtime="20170204 15:56:44.483" starttime="20170204 15:56:44.451"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:13.105" starttime="20170204 15:47:13.071"></status>
+<status status="PASS" endtime="20170204 15:56:44.483" starttime="20170204 15:56:44.451"></status>
 </kw>
 <kw name="Artikel type" library="Observations-nl_be">
 <kw name="Element Should Contain" library="ExtendedSelenium2Library">
@@ -576,10 +576,10 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[6]/div/div/label</arg>
 <arg>Artikel type</arg>
 </arguments>
-<msg timestamp="20170204 15:47:13.106" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[6]/div/div/label' contains text 'Artikel type'.</msg>
-<status status="PASS" endtime="20170204 15:47:13.140" starttime="20170204 15:47:13.106"></status>
+<msg timestamp="20170204 15:56:44.484" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[6]/div/div/label' contains text 'Artikel type'.</msg>
+<status status="PASS" endtime="20170204 15:56:44.515" starttime="20170204 15:56:44.484"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:13.140" starttime="20170204 15:47:13.105"></status>
+<status status="PASS" endtime="20170204 15:56:44.516" starttime="20170204 15:56:44.483"></status>
 </kw>
 <kw name="Straat" library="Observations-nl_be">
 <kw name="Element Should Contain" library="ExtendedSelenium2Library">
@@ -588,10 +588,10 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[7]/div/it-form-field-typeahead-generic/div/label</arg>
 <arg>Straat</arg>
 </arguments>
-<msg timestamp="20170204 15:47:13.141" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[7]/div/it-form-field-typeahead-generic/div/label' contains text 'Straat'.</msg>
-<status status="PASS" endtime="20170204 15:47:13.175" starttime="20170204 15:47:13.140"></status>
+<msg timestamp="20170204 15:56:44.516" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[7]/div/it-form-field-typeahead-generic/div/label' contains text 'Straat'.</msg>
+<status status="PASS" endtime="20170204 15:56:44.548" starttime="20170204 15:56:44.516"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:13.175" starttime="20170204 15:47:13.140"></status>
+<status status="PASS" endtime="20170204 15:56:44.549" starttime="20170204 15:56:44.516"></status>
 </kw>
 <kw name="Stad" library="Observations-nl_be">
 <kw name="Element Should Contain" library="ExtendedSelenium2Library">
@@ -600,10 +600,10 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[8]/div/div/label</arg>
 <arg>Stad</arg>
 </arguments>
-<msg timestamp="20170204 15:47:13.176" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[8]/div/div/label' contains text 'Stad'.</msg>
-<status status="PASS" endtime="20170204 15:47:13.208" starttime="20170204 15:47:13.175"></status>
+<msg timestamp="20170204 15:56:44.549" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[8]/div/div/label' contains text 'Stad'.</msg>
+<status status="PASS" endtime="20170204 15:56:44.580" starttime="20170204 15:56:44.549"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:13.208" starttime="20170204 15:47:13.175"></status>
+<status status="PASS" endtime="20170204 15:56:44.581" starttime="20170204 15:56:44.549"></status>
 </kw>
 <kw name="Waarnemer" library="Observations-nl_be">
 <kw name="Element Should Contain" library="ExtendedSelenium2Library">
@@ -612,10 +612,10 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[9]/div/div/label</arg>
 <arg>Waarnemer</arg>
 </arguments>
-<msg timestamp="20170204 15:47:13.209" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[9]/div/div/label' contains text 'Waarnemer'.</msg>
-<status status="PASS" endtime="20170204 15:47:13.240" starttime="20170204 15:47:13.209"></status>
+<msg timestamp="20170204 15:56:44.581" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[9]/div/div/label' contains text 'Waarnemer'.</msg>
+<status status="PASS" endtime="20170204 15:56:44.618" starttime="20170204 15:56:44.581"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:13.240" starttime="20170204 15:47:13.208"></status>
+<status status="PASS" endtime="20170204 15:56:44.618" starttime="20170204 15:56:44.581"></status>
 </kw>
 <kw name="Artikel" library="Observations-nl_be">
 <kw name="Element Should Contain" library="ExtendedSelenium2Library">
@@ -624,10 +624,10 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[10]/div/it-form-field-typeahead-generic/div/label</arg>
 <arg>Artikel</arg>
 </arguments>
-<msg timestamp="20170204 15:47:13.241" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[10]/div/it-form-field-typeahead-generic/div/label' contains text 'Artikel'.</msg>
-<status status="PASS" endtime="20170204 15:47:13.271" starttime="20170204 15:47:13.240"></status>
+<msg timestamp="20170204 15:56:44.619" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[10]/div/it-form-field-typeahead-generic/div/label' contains text 'Artikel'.</msg>
+<status status="PASS" endtime="20170204 15:56:44.650" starttime="20170204 15:56:44.619"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:13.271" starttime="20170204 15:47:13.240"></status>
+<status status="PASS" endtime="20170204 15:56:44.650" starttime="20170204 15:56:44.619"></status>
 </kw>
 <kw name="Zone" library="Observations-nl_be">
 <kw name="Element Should Contain" library="ExtendedSelenium2Library">
@@ -636,10 +636,10 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[11]/div/div/label</arg>
 <arg>Zone</arg>
 </arguments>
-<msg timestamp="20170204 15:47:13.272" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[11]/div/div/label' contains text 'Zone'.</msg>
-<status status="PASS" endtime="20170204 15:47:13.302" starttime="20170204 15:47:13.272"></status>
+<msg timestamp="20170204 15:56:44.651" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[11]/div/div/label' contains text 'Zone'.</msg>
+<status status="PASS" endtime="20170204 15:56:44.683" starttime="20170204 15:56:44.651"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:13.302" starttime="20170204 15:47:13.271"></status>
+<status status="PASS" endtime="20170204 15:56:44.683" starttime="20170204 15:56:44.650"></status>
 </kw>
 <kw name="Naam overtreder" library="Observations-nl_be">
 <kw name="Element Should Contain" library="ExtendedSelenium2Library">
@@ -648,10 +648,10 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[12]/div/div/label</arg>
 <arg>Naam overtreder</arg>
 </arguments>
-<msg timestamp="20170204 15:47:13.302" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[12]/div/div/label' contains text 'Naam overtreder'.</msg>
-<status status="PASS" endtime="20170204 15:47:13.338" starttime="20170204 15:47:13.302"></status>
+<msg timestamp="20170204 15:56:44.683" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[12]/div/div/label' contains text 'Naam overtreder'.</msg>
+<status status="PASS" endtime="20170204 15:56:44.716" starttime="20170204 15:56:44.683"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:13.338" starttime="20170204 15:47:13.302"></status>
+<status status="PASS" endtime="20170204 15:56:44.716" starttime="20170204 15:56:44.683"></status>
 </kw>
 <kw name="Vanaf" library="Observations-nl_be">
 <kw name="Element Should Contain" library="ExtendedSelenium2Library">
@@ -660,10 +660,10 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[13]/div/div/label</arg>
 <arg>Vanaf</arg>
 </arguments>
-<msg timestamp="20170204 15:47:13.339" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[13]/div/div/label' contains text 'Vanaf'.</msg>
-<status status="PASS" endtime="20170204 15:47:13.372" starttime="20170204 15:47:13.338"></status>
+<msg timestamp="20170204 15:56:44.717" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[13]/div/div/label' contains text 'Vanaf'.</msg>
+<status status="PASS" endtime="20170204 15:56:44.751" starttime="20170204 15:56:44.717"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:13.372" starttime="20170204 15:47:13.338"></status>
+<status status="PASS" endtime="20170204 15:56:44.751" starttime="20170204 15:56:44.716"></status>
 </kw>
 <kw name="Tot en met" library="Observations-nl_be">
 <kw name="Element Should Contain" library="ExtendedSelenium2Library">
@@ -672,24 +672,24 @@
 <arg>xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[14]/div/div/label</arg>
 <arg>Tot en met</arg>
 </arguments>
-<msg timestamp="20170204 15:47:13.373" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[14]/div/div/label' contains text 'Tot en met'.</msg>
-<status status="PASS" endtime="20170204 15:47:13.408" starttime="20170204 15:47:13.373"></status>
+<msg timestamp="20170204 15:56:44.752" level="INFO">Verifying element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[14]/div/div/label' contains text 'Tot en met'.</msg>
+<status status="PASS" endtime="20170204 15:56:44.784" starttime="20170204 15:56:44.752"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:13.408" starttime="20170204 15:47:13.372"></status>
+<status status="PASS" endtime="20170204 15:56:44.785" starttime="20170204 15:56:44.751"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:13.408" starttime="20170204 15:47:12.822"></status>
+<status status="PASS" endtime="20170204 15:56:44.785" starttime="20170204 15:56:44.220"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="Common">
 <kw name="Close Browser" library="ExtendedSelenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170204 15:47:16.488" starttime="20170204 15:47:13.409"></status>
+<status status="PASS" endtime="20170204 15:56:47.917" starttime="20170204 15:56:44.785"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:16.489" starttime="20170204 15:47:13.408"></status>
+<status status="PASS" endtime="20170204 15:56:47.918" starttime="20170204 15:56:44.785"></status>
 </kw>
-<status status="PASS" endtime="20170204 15:47:16.489" critical="yes" starttime="20170204 15:47:03.991"></status>
+<status status="PASS" endtime="20170204 15:56:47.919" critical="yes" starttime="20170204 15:56:35.447"></status>
 </test>
 <doc>POC for InTouch</doc>
-<status status="PASS" endtime="20170204 15:47:16.492" starttime="20170204 15:46:32.443"></status>
+<status status="PASS" endtime="20170204 15:56:47.924" starttime="20170204 15:56:05.522"></status>
 </suite>
 <statistics>
 <total>
