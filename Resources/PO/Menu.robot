@@ -3,8 +3,14 @@ Library  ExtendedSelenium2Library
 
 *** Keywords ***
 
-Parking Observations
+Open Observations
     Click link  id=menu_observations
-    #Wait Until Page Contains  Controles
+
+Close Observations
+    Click link  id=menu_observations
+
+Parking Observations
     Click link  id=menu_observations_parking_retribution
-   #Wait Until Page Contains  Controle Parkeren
+
+GAS Observations
+    Click link  id=menu_observations_parking_retribution

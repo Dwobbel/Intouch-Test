@@ -8,12 +8,10 @@ Go to InTouch
     BOindex.Load login page
     BOindex.Verify page loaded
 
-Log in to InTouch nl_be
-    BOindex.Choose NL
+Log In to InTouch nl_be
     Boindex.login
     Wait Until Page Contains  Welkom bij In Touch !
 
 Log In to InTouch en_us
-    BOindex.Choose EN
     Boindex.login
     Wait Until Page Contains  Welcome to In Touch !
