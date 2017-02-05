@@ -4,7 +4,7 @@ Library  ExtendedSelenium2Library
 *** Keywords ***
 
 Load login page
-    Go To  http://192.168.1.141
+    Go To  http://192.168.1.141/intouch-base/rest/nlogin
 
 Verify page loaded
     Wait Until Page Contains  Log in om door te gaan

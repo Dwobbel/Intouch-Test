@@ -1,5 +1,6 @@
 *** Settings ***
 Library  ExtendedSelenium2Library
+Resource  PO/ParkingObsList.robot
 
 *** Keywords ***
 
@@ -18,49 +19,88 @@ Check content of Unit dropdown
     Wait until element contains  xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]  Alle
 
 Check Filters
-    Deelgebied
-    Referentie
-    Kenteken
-    Nationaliteit voertuig
-    Status
-    Artikel type
-    Straat
-    Stad
-    Waarnemer
-    Artikel
-    Zone
-    Naam overtreder
-    Vanaf
-    Tot en met
+    fDeelgebied
+    fReferentie
+    fKenteken
+    fNationaliteit voertuig
+    fStatus
+    fArtikel type
+    fStraat
+    fStad
+    fWaarnemer
+    fArtikel
+    fZone
+    fNaam overtreder
+    fVanaf
+    fTot en met
 
-Deelgebied
+fDeelgebied
     element should contain  xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]  Deelgebied
-
-Referentie
+fReferentie
     element should contain  xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[2]/div/div/label  Referentie
-Kenteken
+fKenteken
     element should contain  xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[3]/div/div/label  Kenteken
-Nationaliteit voertuig
+fNationaliteit voertuig
     element should contain  xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[4]/div/div/label  Nationaliteit voertuig
-Status
+fStatus
     element should contain  xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[5]/div/div/label  Status
-Artikel type
+fArtikel type
     element should contain  xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[6]/div/div/label  Artikel type
-Straat
+fStraat
     element should contain  xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[7]/div/it-form-field-typeahead-generic/div/label  Straat
-Stad
+fStad
     element should contain  xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[8]/div/div/label  Stad
-Waarnemer
+fWaarnemer
     element should contain  xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[9]/div/div/label  Waarnemer
-Artikel
+fArtikel
     element should contain  xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[10]/div/it-form-field-typeahead-generic/div/label  Artikel
-Zone
+fZone
     element should contain  xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[11]/div/div/label  Zone
-Naam overtreder
+fNaam overtreder
     element should contain  xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[12]/div/div/label  Naam overtreder
-Vanaf
+fVanaf
     element should contain  xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[13]/div/div/label  Vanaf
-Tot en met
+fTot en met
     element should contain  xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[14]/div/div/label  Tot en met
 
 
+Check default headers
+    ParkingObslist.dhReferentie
+    ParkingObslist.dhDatum
+    ParkingObslist.dhTijd
+    ParkingObslist.dhArtikel type
+    ParkingObslist.dhStatus
+    ParkingObslist.dhKenteken
+    ParkingObslist.dhNationaliteit voertuig
+    ParkingObslist.dhStraat vaststelling
+    ParkingObslist.dhStad
+    ParkingObslist.dhZone
+
+Check all headers
+    ParkingObslist.ahReferentie
+    ParkingObslist.ahDatum
+    ParkingObslist.ahTijd
+    ParkingObslist.ahArtikel type
+    ParkingObslist.ahArtikel wegcode
+    ParkingObslist.ahStatus
+    ParkingObslist.ahKenteken
+    ParkingObslist.ahNationaliteit voertuig
+    ParkingObslist.ahStraat vaststelling
+    ParkingObslist.ahStad
+    ParkingObslist.ahZone
+    ParkingObslist.ahVaststeller
+    ParkingObslist.ahNaam overtreder
+    ParkingObslist.ahStraat overtreder
+    ParkingObslist.ahStad overtreder
+    ParkingObslist.ahPostcode overtreder
+    ParkingObslist.ahLand overtreder
+
+Enable all columns
+    click element  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[2]
+    click element  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[2]/ul/li[5]
+    click element  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[2]/ul/li[12]
+    click element  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[2]/ul/li[13]
+    click element  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[2]/ul/li[14]
+    click element  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[2]/ul/li[15]
+    click element  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[2]/ul/li[16]
+    click element  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[2]/ul/li[17]
