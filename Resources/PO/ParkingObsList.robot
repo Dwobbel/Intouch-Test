@@ -4,25 +4,25 @@ Library  ExtendedSelenium2Library
 *** Keywords ***
 
 
-ParkingObslist.dhReferentie
+dhReferentie
     element should contain  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[4]/table/thead/tr/th[1]  Referentie
-ParkingObslist.dhDatum
+dhDatum
     element should contain  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[4]/table/thead/tr/th[2]  Datum
-ParkingObslist.dhTijd
+dhTijd
     element should contain  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[4]/table/thead/tr/th[3]  Tijd
-ParkingObslist.dhArtikel type
+dhArtikel type
     element should contain  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[4]/table/thead/tr/th[4]  Artikel type
-ParkingObslist.dhStatus
+dhStatus
     element should contain  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[4]/table/thead/tr/th[5]  Status
-ParkingObslist.dhKenteken
+dhKenteken
     element should contain  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[4]/table/thead/tr/th[6]  Kenteken
-ParkingObslist.dhNationaliteit voertuig
+dhNationaliteit voertuig
     element should contain  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[4]/table/thead/tr/th[7]  Nationaliteit voertuig
-ParkingObslist.dhStraat vaststelling
+dhStraat vaststelling
     element should contain  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[4]/table/thead/tr/th[8]  Straat vaststelling
-ParkingObslist.dhStad
+dhStad
     element should contain  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[4]/table/thead/tr/th[9]  Stad
-ParkingObslist.dhZone
+dhZone
     element should contain  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[4]/table/thead/tr/th[10]  Zone
 
 ahReferentie

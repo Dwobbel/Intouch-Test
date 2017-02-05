@@ -4,14 +4,14 @@ Library  ExtendedSelenium2Library
 *** Keywords ***
 
 Load login page
-    Go To  http://192.168.1.141/intouch-base/rest/nlogin
+    Go To  ${START_URL}
 
 Verify page loaded
     Wait Until Page Contains  Log in om door te gaan
 
 Login
-    Input Text  xpath=//*[@id="loginForm"]/div[1]/input  kristofb@owner
-    Input Text  xpath=//*[@id="loginForm"]/div[2]/input  Testing123
+    Input Text  xpath=//*[@id="loginForm"]/div[1]/input  ${USER}
+    Input Text  xpath=//*[@id="loginForm"]/div[2]/input  ${PASSWORD}
     Click Button  id=btnLogin
 
 Choose NL
