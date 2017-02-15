@@ -1,218 +1,352 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170205 19:44:13.349" generator="Robot 3.0.1 (Python 2.7.13 on win32)">
-<suite source="C:\development\robot-scripts\Intouch-Test\tests\intouchpoc.robot" id="s1" name="Intouchpoc">
-<test id="s1-t1" name="Units Dutch">
-<kw type="setup" name="Begin Web Test" library="Common">
-<kw name="Open Browser" library="ExtendedSelenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<robot generated="20170215 20:42:40.072" generator="Robot 3.0.1 (Python 2.7.13 on win32)">
+<suite source="C:\development\robot-scripts\Intouch-Test\Tests\RESTpoc.robot" id="s1" name="RESTpoc">
+<test id="s1-t1" name="Test 2">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
 <arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
+<arg>kristofb@owner</arg>
+<arg>Testing123</arg>
 </arguments>
-<msg timestamp="20170205 19:44:13.472" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20170205 19:44:17.497" starttime="20170205 19:44:13.472"></status>
+<assign>
+<var>${auth}</var>
+</assign>
+<msg timestamp="20170215 20:42:40.223" level="INFO">${auth} = [u'kristofb@owner', u'Testing123']</msg>
+<status status="PASS" endtime="20170215 20:42:40.223" starttime="20170215 20:42:40.223"></status>
 </kw>
-<status status="PASS" endtime="20170205 19:44:17.497" starttime="20170205 19:44:13.472"></status>
-</kw>
-<kw name="Check Units when Language is Dutch" library="tests">
-<kw name="Go to InTouch" library="InTouch">
-<kw name="Load login page" library="BOindex">
-<kw name="Go To" library="ExtendedSelenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
 <arguments>
-<arg>${START_URL}</arg>
+<arg>lang=nl_be</arg>
+<arg>TYPE=2,10,11</arg>
 </arguments>
-<msg timestamp="20170205 19:44:17.499" level="INFO">Opening url 'http://192.168.1.141/intouch-base/rest/nlogin'</msg>
-<status status="PASS" endtime="20170205 19:44:17.824" starttime="20170205 19:44:17.499"></status>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20170215 20:42:40.224" level="INFO">${headers} = {u'lang': u'nl_be', u'TYPE': u'2,10,11'}</msg>
+<status status="PASS" endtime="20170215 20:42:40.224" starttime="20170215 20:42:40.224"></status>
 </kw>
-<status status="PASS" endtime="20170205 19:44:17.824" starttime="20170205 19:44:17.499"></status>
-</kw>
-<kw name="Verify page loaded" library="BOindex">
-<kw name="Wait Until Page Contains" library="ExtendedSelenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
 <arguments>
-<arg>Log in om door te gaan</arg>
+<arg>JSESSIONID=-3ICZu9Oat0do5y0hEAbRQz7.undefined</arg>
 </arguments>
-<status status="PASS" endtime="20170205 19:44:17.843" starttime="20170205 19:44:17.825"></status>
+<assign>
+<var>${cookies}</var>
+</assign>
+<msg timestamp="20170215 20:42:40.225" level="INFO">${cookies} = {u'JSESSIONID': u'-3ICZu9Oat0do5y0hEAbRQz7.undefined'}</msg>
+<status status="PASS" endtime="20170215 20:42:40.225" starttime="20170215 20:42:40.225"></status>
 </kw>
-<status status="PASS" endtime="20170205 19:44:17.843" starttime="20170205 19:44:17.824"></status>
-</kw>
-<status status="PASS" endtime="20170205 19:44:17.843" starttime="20170205 19:44:17.498"></status>
-</kw>
-<kw name="Choose NL" library="BOindex">
-<kw name="Select From List By Value" library="ExtendedSelenium2Library">
-<doc>Selects ``*values`` from list identified by ``locator``.</doc>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
 <arguments>
-<arg>xpath=//*[@id="loginForm"]/div[3]/select</arg>
-<arg>nl_be</arg>
+<arg>Intouch</arg>
+<arg>http://192.168.1.141/intouch-base/rest/observation</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<arg>cookies=${cookies}</arg>
 </arguments>
-<msg timestamp="20170205 19:44:17.844" level="INFO">Selecting value(s) 'nl_be' from list 'xpath=//*[@id="loginForm"]/div[3]/select'.</msg>
-<status status="PASS" endtime="20170205 19:44:17.913" starttime="20170205 19:44:17.844"></status>
+<msg timestamp="20170215 20:42:40.226" level="INFO">Creating Session using : alias=Intouch, url=http://192.168.1.141/intouch-base/rest/observation, headers={u'lang': u'nl_be', u'TYPE': u'2,10,11'},                     cookies={u'JSESSIONID': u'-3ICZu9Oat0do5y0hEAbRQz7.undefined'}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x03D33E30&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" endtime="20170215 20:42:40.226" starttime="20170215 20:42:40.225"></status>
 </kw>
-<status status="PASS" endtime="20170205 19:44:17.914" starttime="20170205 19:44:17.843"></status>
-</kw>
-<kw name="Log In to InTouch nl_be" library="InTouch">
-<kw name="Login" library="BOindex">
-<kw name="Input Text" library="ExtendedSelenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
 <arguments>
-<arg>xpath=//*[@id="loginForm"]/div[1]/input</arg>
-<arg>${USER}</arg>
+<arg>Intouch</arg>
+<arg>/</arg>
 </arguments>
-<msg timestamp="20170205 19:44:17.915" level="INFO">Typing text 'kristofb@owner' into text field 'xpath=//*[@id="loginForm"]/div[1]/input'</msg>
-<status status="PASS" endtime="20170205 19:44:18.010" starttime="20170205 19:44:17.914"></status>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20170215 20:42:40.311" level="INFO">Get Request using : alias=Intouch, uri=/, headers=None </msg>
+<msg timestamp="20170215 20:42:40.311" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20170215 20:42:40.311" starttime="20170215 20:42:40.226"></status>
 </kw>
-<kw name="Input Text" library="ExtendedSelenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
 <arguments>
-<arg>xpath=//*[@id="loginForm"]/div[2]/input</arg>
-<arg>${PASSWORD}</arg>
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
 </arguments>
-<msg timestamp="20170205 19:44:18.011" level="INFO">Typing text 'Testing123' into text field 'xpath=//*[@id="loginForm"]/div[2]/input'</msg>
-<status status="PASS" endtime="20170205 19:44:18.100" starttime="20170205 19:44:18.010"></status>
+<msg timestamp="20170215 20:42:40.312" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20170215 20:42:40.312" starttime="20170215 20:42:40.312"></status>
 </kw>
-<kw name="Click Button" library="ExtendedSelenium2Library">
-<doc>Clicks a button identified by ``locator``.</doc>
+<kw name="To Json" library="RequestsLibrary">
+<doc>Convert a string to a JSON object</doc>
 <arguments>
-<arg>id=btnLogin</arg>
+<arg>${resp.content}</arg>
+<arg>pretty_print=True</arg>
 </arguments>
-<msg timestamp="20170205 19:44:18.100" level="INFO">Clicking button 'id=btnLogin'.</msg>
-<status status="PASS" endtime="20170205 19:44:20.178" starttime="20170205 19:44:18.100"></status>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170215 20:42:40.315" level="INFO">To JSON using : content={"metaData":{"total":15274,"numberOfPages":1528},"items":[{"id":84907,"reference":"234234234","dateOfOffense":1483697519725,"article":"!nl! - 77.4          -[VI]","articleRegulation":"Art. 77.4","amount":5500,"licensePlate":"1FJB502","streetOfOffense":"GROENINGEBELUIK(KOR)","cityOfOffense":"KORTRIJK","state":"IMPORTED","attendant":"michalt22 michal2","camera":null,"hitrate":null,"observer":"2169","type":"GAS parkeren","typeId":2,"created_at":1483697395439,"person":{"name":null,"address":"","city":null,"zipCode":null,"country":"","nationalNumber":null},"vehicle_nationality":"BELGIE"},{"id":84906,"reference":"123123123","dateOfOffense":1483695125407,"article":"!nl! - 77.4          -[VI]","articleRegulation":"Art. 77.4","amount":5500,"licensePlate":"1FJB501","streetOfOffense":"LEEMPIJPSTRAAT(MAR)","cityOfOffense":"MARKE","state":"IMPORTED","attendant":"h1 h1","camera":null,"hitrate":null,"observer":"2407","type":"GAS parkeren","typeId":2,"created_at":1483695013781,"person":{"name":null,"address":"","city":null,"zipCode":null,"country":"","nationalNumber":null},"vehicle_nationality":"BELGIE"},{"id":84905,"reference":"POGAS.000006/2017","dateOfOffense":1483694801875,"article":"!nl! - 23.1.1\xc2\xb0       -[VI]","articleRegulation":"Art.  23.1.1\xc2\xb0 KB 01.12.1975","amount":5500,"licensePlate":"TEST123","streetOfOffense":"LANGE STEENSTRAAT(KOR)","cityOfOffense":"KORTRIJK","state":"IMPORTED","attendant":"michalt22 michal2","camera":null,"hitrate":null,"observer":"2169","type":"GAS parkeren","typeId":2,"created_at":1483694633383,"person":{"name":null,"address":"","city":null,"zipCode":null,"country":"","nationalNumber":null},"vehicle_nationality":"ANDORRA"},{"id":84871,"reference":"170048001174","dateOfOffense":1483524731000,"article":"!nl! - KORTPARKEREN","articleRegulation":"","amount":2500,"licensePlate":"HUG565","streetOfOffense":"GROENINGEKAAI(KOR)","cityOfOffense":"KORTRIJK","state":"IN_PROGRESS","attendant":"TRADELEC INTL","camera":null,"hitrate":null,"observer":"1013","type":"Extra kortparkeren","typeId":7,"created_at":1483524847407,"person":null,"vehicle_nationality":"BELGIE"},{"id":84872,"reference":"170048001073","dateOfOffense":1483524705000,"article":"!nl! - KORTPARKEREN","articleRegulation":"","amount":2500,"licensePlate":"HIH674","streetOfOffense":"GROENINGEKAAI(KOR)","cityOfOffense":"KORTRIJK","state":"IN_PROGRESS","attendant":"TRADELEC INTL","camera":null,"hitrate":null,"observer":"1013","type":"Extra kortparkeren","typeId":7,"created_at":1483524847469,"person":null,"vehicle_nationality":"BELGIE"},{"id":84875,"reference":"700408000939","dateOfOffense":1483524669000,"article":"!nl! - BEWONERSKAART","articleRegulation":"","amount":2500,"licensePlate":"BEE649","streetOfOffense":"HEILIGE GEESTSTRAAT(KOR)","cityOfOffense":"KORTRIJK","state":"IN_PROGRESS","attendant":"TRADELEC INTL","camera":null,"hitrate":null,"observer":"1013","type":"Bewonersparkeren","typeId":5,"created_at":1483524848714,"person":null,"vehicle_nationality":"BELGIE"},{"id":84870,"reference":"700408000838","dateOfOffense":1483524581000,"article":"!nl! - BLAUWE ZONE","articleRegulation":"","amount":2500,"licensePlate":"BLW467","streetOfOffense":"GULDENSPORENLAAN(KOR)","cityOfOffense":"KORTRIJK","state":"IN_PROGRESS","attendant":"TRADELEC INTL","camera":null,"hitrate":null,"observer":"1013","type":"Blauwe zone","typeId":4,"created_at":1483524846414,"person":null,"vehicle_nationality":"BELGIE"},{"id":84876,"reference":"700408000737","dateOfOffense":1483524446000,"article":"!nl! - BEWONERSKAART","articleRegulation":"","amount":2500,"licensePlate":"BEW001","streetOfOffense":"HAVERMARKT(KOR)","cityOfOffense":"KORTRIJK","state":"IN_PROGRESS","attendant":"TRADELEC INTL","camera":null,"hitrate":null,"observer":"1013","type":"Bewonersparkeren","typeId":5,"created_at":1483524848808,"person":null,"vehicle_nationality":"BELGIE"},{"id":84874,"reference":"170048000366","dateOfOffense":1483524338000,"article":"!nl! - KORTPARKEREN","articleRegulation":"","amount":2500,"licensePlate":"P301","streetOfOffense":"KONING ALBERTSTRAAT(KOR)","cityOfOffense":"KORTRIJK","state":"IN_PROGRESS","attendant":"TRADELEC INTL","camera":null,"hitrate":null,"observer":"1013","type":"Extra kortparkeren","typeId":7,"created_at":1483524847786,"person":null,"vehicle_nationality":"BELGIE"},{"id":84873,"reference":"170048000265","dateOfOffense":1483524317000,"article":"!nl! - KORTPARKEREN","articleRegulation":"","amount":2500,"licensePlate":"P30","streetOfOffense":"KONING ALBERTSTRAAT(KOR)","cityOfOffense":"KORTRIJK","state":"IN_PROGRESS","attendant":"TRADELEC INTL","camera":null,"hitrate":null,"observer":"1013","type":"Extra kortparkeren","typeId":7,"created_at":1483524847726,"person":null,"vehicle_nationality":"BELGIE"}]} </msg>
+<msg timestamp="20170215 20:42:40.315" level="INFO">To JSON using : pretty_print=True </msg>
+<msg timestamp="20170215 20:42:40.315" level="INFO">${output} = {
+    "items": [
+        {
+            "amount": 5500,
+            "article": "!nl! - 77.4          -[VI]",
+            "articleRegulation": "Art. 77.4",
+            "attendant": "michalt22 michal2",
+...</msg>
+<status status="PASS" endtime="20170215 20:42:40.315" starttime="20170215 20:42:40.313"></status>
 </kw>
-<status status="PASS" endtime="20170205 19:44:20.178" starttime="20170205 19:44:17.914"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="ExtendedSelenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
 <arguments>
-<arg>Welkom bij In Touch !</arg>
+<arg>${output}</arg>
 </arguments>
-<status status="PASS" endtime="20170205 19:44:20.217" starttime="20170205 19:44:20.178"></status>
-</kw>
-<status status="PASS" endtime="20170205 19:44:20.218" starttime="20170205 19:44:17.914"></status>
-</kw>
-<kw name="Open Observations" library="Menu">
-<kw name="Click Link" library="ExtendedSelenium2Library">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>id=menu_observations</arg>
-</arguments>
-<msg timestamp="20170205 19:44:20.219" level="INFO">Clicking link 'id=menu_observations'.</msg>
-<status status="PASS" endtime="20170205 19:44:20.840" starttime="20170205 19:44:20.219"></status>
-</kw>
-<status status="PASS" endtime="20170205 19:44:20.840" starttime="20170205 19:44:20.218"></status>
-</kw>
-<kw name="Parking Observations" library="Menu">
-<kw name="Click Link" library="ExtendedSelenium2Library">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>id=menu_observations_parking_retribution</arg>
-</arguments>
-<msg timestamp="20170205 19:44:20.843" level="INFO">Clicking link 'id=menu_observations_parking_retribution'.</msg>
-<status status="PASS" endtime="20170205 19:44:22.393" starttime="20170205 19:44:20.842"></status>
-</kw>
-<status status="PASS" endtime="20170205 19:44:22.393" starttime="20170205 19:44:20.841"></status>
-</kw>
-<kw name="Check content of Unit dropdown" library="Observations-nl_be">
-<kw name="Click Element" library="ExtendedSelenium2Library">
-<doc>Clicks an element identified by ``locator``.</doc>
-<arguments>
-<arg>${UNIT_SELECT}</arg>
-</arguments>
-<msg timestamp="20170205 19:44:22.393" level="INFO">Clicking element 'xpath=//*[@id="filterObservationRetributionsPanel"]/div[3]/it-filters/div[1]/div[1]/div[1]/div/div/div[2]'.</msg>
-<status status="PASS" endtime="20170205 19:44:22.977" starttime="20170205 19:44:22.393"></status>
-</kw>
-<kw name="Click Link" library="ExtendedSelenium2Library">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>id=id_UNITS_ID_1</arg>
-</arguments>
-<msg timestamp="20170205 19:44:22.977" level="INFO">Clicking link 'id=id_UNITS_ID_1'.</msg>
-<status status="PASS" endtime="20170205 19:44:23.569" starttime="20170205 19:44:22.977"></status>
-</kw>
-<kw name="Wait Until Element Contains" library="ExtendedSelenium2Library">
-<doc>Waits until given element contains `text`.</doc>
-<arguments>
-<arg>${UNIT_SELECT}</arg>
-<arg>Kortrijk</arg>
-</arguments>
-<status status="PASS" endtime="20170205 19:44:23.602" starttime="20170205 19:44:23.569"></status>
-</kw>
-<kw name="Click Link" library="ExtendedSelenium2Library">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>id=id_UNITS_ID_2</arg>
-</arguments>
-<msg timestamp="20170205 19:44:23.603" level="INFO">Clicking link 'id=id_UNITS_ID_2'.</msg>
-<status status="PASS" endtime="20170205 19:44:24.222" starttime="20170205 19:44:23.603"></status>
-</kw>
-<kw name="Wait Until Element Contains" library="ExtendedSelenium2Library">
-<doc>Waits until given element contains `text`.</doc>
-<arguments>
-<arg>${UNIT_SELECT}</arg>
-<arg>Kuurne</arg>
-</arguments>
-<status status="PASS" endtime="20170205 19:44:24.264" starttime="20170205 19:44:24.223"></status>
-</kw>
-<kw name="Click Link" library="ExtendedSelenium2Library">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>id=id_UNITS_ID_3</arg>
-</arguments>
-<msg timestamp="20170205 19:44:24.265" level="INFO">Clicking link 'id=id_UNITS_ID_3'.</msg>
-<status status="PASS" endtime="20170205 19:44:24.903" starttime="20170205 19:44:24.264"></status>
-</kw>
-<kw name="Wait Until Element Contains" library="ExtendedSelenium2Library">
-<doc>Waits until given element contains `text`.</doc>
-<arguments>
-<arg>${UNIT_SELECT}</arg>
-<arg>Lendelede</arg>
-</arguments>
-<status status="PASS" endtime="20170205 19:44:24.940" starttime="20170205 19:44:24.904"></status>
-</kw>
-<kw name="Click Link" library="ExtendedSelenium2Library">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>id=id_UNITS_ID_#UNITS_ID#</arg>
-</arguments>
-<msg timestamp="20170205 19:44:24.940" level="INFO">Clicking link 'id=id_UNITS_ID_#UNITS_ID#'.</msg>
-<status status="PASS" endtime="20170205 19:44:25.565" starttime="20170205 19:44:24.940"></status>
-</kw>
-<kw name="Wait Until Element Contains" library="ExtendedSelenium2Library">
-<doc>Waits until given element contains `text`.</doc>
-<arguments>
-<arg>${UNIT_SELECT}</arg>
-<arg>Alle</arg>
-</arguments>
-<status status="PASS" endtime="20170205 19:44:25.606" starttime="20170205 19:44:25.565"></status>
-</kw>
-<status status="PASS" endtime="20170205 19:44:25.606" starttime="20170205 19:44:22.393"></status>
-</kw>
-<kw name="Close Observations" library="Menu">
-<kw name="Click Link" library="ExtendedSelenium2Library">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>id=menu_observations</arg>
-</arguments>
-<msg timestamp="20170205 19:44:25.607" level="INFO">Clicking link 'id=menu_observations'.</msg>
-<status status="PASS" endtime="20170205 19:44:26.219" starttime="20170205 19:44:25.607"></status>
-</kw>
-<status status="PASS" endtime="20170205 19:44:26.220" starttime="20170205 19:44:25.606"></status>
-</kw>
-<status status="PASS" endtime="20170205 19:44:26.220" starttime="20170205 19:44:17.498"></status>
-</kw>
-<kw type="teardown" name="End Web Test" library="Common">
-<kw name="Close Browser" library="ExtendedSelenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170205 19:44:29.308" starttime="20170205 19:44:26.223"></status>
-</kw>
-<status status="PASS" endtime="20170205 19:44:29.308" starttime="20170205 19:44:26.222"></status>
+<msg timestamp="20170215 20:42:40.316" level="INFO">{
+    "items": [
+        {
+            "amount": 5500,
+            "article": "!nl! - 77.4          -[VI]",
+            "articleRegulation": "Art. 77.4",
+            "attendant": "michalt22 michal2",
+            "camera": null,
+            "cityOfOffense": "KORTRIJK",
+            "created_at": 1483697395439,
+            "dateOfOffense": 1483697519725,
+            "hitrate": null,
+            "id": 84907,
+            "licensePlate": "1FJB502",
+            "observer": "2169",
+            "person": {
+                "address": "",
+                "city": null,
+                "country": "",
+                "name": null,
+                "nationalNumber": null,
+                "zipCode": null
+            },
+            "reference": "234234234",
+            "state": "IMPORTED",
+            "streetOfOffense": "GROENINGEBELUIK(KOR)",
+            "type": "GAS parkeren",
+            "typeId": 2,
+            "vehicle_nationality": "BELGIE"
+        },
+        {
+            "amount": 5500,
+            "article": "!nl! - 77.4          -[VI]",
+            "articleRegulation": "Art. 77.4",
+            "attendant": "h1 h1",
+            "camera": null,
+            "cityOfOffense": "MARKE",
+            "created_at": 1483695013781,
+            "dateOfOffense": 1483695125407,
+            "hitrate": null,
+            "id": 84906,
+            "licensePlate": "1FJB501",
+            "observer": "2407",
+            "person": {
+                "address": "",
+                "city": null,
+                "country": "",
+                "name": null,
+                "nationalNumber": null,
+                "zipCode": null
+            },
+            "reference": "123123123",
+            "state": "IMPORTED",
+            "streetOfOffense": "LEEMPIJPSTRAAT(MAR)",
+            "type": "GAS parkeren",
+            "typeId": 2,
+            "vehicle_nationality": "BELGIE"
+        },
+        {
+            "amount": 5500,
+            "article": "!nl! - 23.1.1\u00b0       -[VI]",
+            "articleRegulation": "Art.  23.1.1\u00b0 KB 01.12.1975",
+            "attendant": "michalt22 michal2",
+            "camera": null,
+            "cityOfOffense": "KORTRIJK",
+            "created_at": 1483694633383,
+            "dateOfOffense": 1483694801875,
+            "hitrate": null,
+            "id": 84905,
+            "licensePlate": "TEST123",
+            "observer": "2169",
+            "person": {
+                "address": "",
+                "city": null,
+                "country": "",
+                "name": null,
+                "nationalNumber": null,
+                "zipCode": null
+            },
+            "reference": "POGAS.000006/2017",
+            "state": "IMPORTED",
+            "streetOfOffense": "LANGE STEENSTRAAT(KOR)",
+            "type": "GAS parkeren",
+            "typeId": 2,
+            "vehicle_nationality": "ANDORRA"
+        },
+        {
+            "amount": 2500,
+            "article": "!nl! - KORTPARKEREN",
+            "articleRegulation": "",
+            "attendant": "TRADELEC INTL",
+            "camera": null,
+            "cityOfOffense": "KORTRIJK",
+            "created_at": 1483524847407,
+            "dateOfOffense": 1483524731000,
+            "hitrate": null,
+            "id": 84871,
+            "licensePlate": "HUG565",
+            "observer": "1013",
+            "person": null,
+            "reference": "170048001174",
+            "state": "IN_PROGRESS",
+            "streetOfOffense": "GROENINGEKAAI(KOR)",
+            "type": "Extra kortparkeren",
+            "typeId": 7,
+            "vehicle_nationality": "BELGIE"
+        },
+        {
+            "amount": 2500,
+            "article": "!nl! - KORTPARKEREN",
+            "articleRegulation": "",
+            "attendant": "TRADELEC INTL",
+            "camera": null,
+            "cityOfOffense": "KORTRIJK",
+            "created_at": 1483524847469,
+            "dateOfOffense": 1483524705000,
+            "hitrate": null,
+            "id": 84872,
+            "licensePlate": "HIH674",
+            "observer": "1013",
+            "person": null,
+            "reference": "170048001073",
+            "state": "IN_PROGRESS",
+            "streetOfOffense": "GROENINGEKAAI(KOR)",
+            "type": "Extra kortparkeren",
+            "typeId": 7,
+            "vehicle_nationality": "BELGIE"
+        },
+        {
+            "amount": 2500,
+            "article": "!nl! - BEWONERSKAART",
+            "articleRegulation": "",
+            "attendant": "TRADELEC INTL",
+            "camera": null,
+            "cityOfOffense": "KORTRIJK",
+            "created_at": 1483524848714,
+            "dateOfOffense": 1483524669000,
+            "hitrate": null,
+            "id": 84875,
+            "licensePlate": "BEE649",
+            "observer": "1013",
+            "person": null,
+            "reference": "700408000939",
+            "state": "IN_PROGRESS",
+            "streetOfOffense": "HEILIGE GEESTSTRAAT(KOR)",
+            "type": "Bewonersparkeren",
+            "typeId": 5,
+            "vehicle_nationality": "BELGIE"
+        },
+        {
+            "amount": 2500,
+            "article": "!nl! - BLAUWE ZONE",
+            "articleRegulation": "",
+            "attendant": "TRADELEC INTL",
+            "camera": null,
+            "cityOfOffense": "KORTRIJK",
+            "created_at": 1483524846414,
+            "dateOfOffense": 1483524581000,
+            "hitrate": null,
+            "id": 84870,
+            "licensePlate": "BLW467",
+            "observer": "1013",
+            "person": null,
+            "reference": "700408000838",
+            "state": "IN_PROGRESS",
+            "streetOfOffense": "GULDENSPORENLAAN(KOR)",
+            "type": "Blauwe zone",
+            "typeId": 4,
+            "vehicle_nationality": "BELGIE"
+        },
+        {
+            "amount": 2500,
+            "article": "!nl! - BEWONERSKAART",
+            "articleRegulation": "",
+            "attendant": "TRADELEC INTL",
+            "camera": null,
+            "cityOfOffense": "KORTRIJK",
+            "created_at": 1483524848808,
+            "dateOfOffense": 1483524446000,
+            "hitrate": null,
+            "id": 84876,
+            "licensePlate": "BEW001",
+            "observer": "1013",
+            "person": null,
+            "reference": "700408000737",
+            "state": "IN_PROGRESS",
+            "streetOfOffense": "HAVERMARKT(KOR)",
+            "type": "Bewonersparkeren",
+            "typeId": 5,
+            "vehicle_nationality": "BELGIE"
+        },
+        {
+            "amount": 2500,
+            "article": "!nl! - KORTPARKEREN",
+            "articleRegulation": "",
+            "attendant": "TRADELEC INTL",
+            "camera": null,
+            "cityOfOffense": "KORTRIJK",
+            "created_at": 1483524847786,
+            "dateOfOffense": 1483524338000,
+            "hitrate": null,
+            "id": 84874,
+            "licensePlate": "P301",
+            "observer": "1013",
+            "person": null,
+            "reference": "170048000366",
+            "state": "IN_PROGRESS",
+            "streetOfOffense": "KONING ALBERTSTRAAT(KOR)",
+            "type": "Extra kortparkeren",
+            "typeId": 7,
+            "vehicle_nationality": "BELGIE"
+        },
+        {
+            "amount": 2500,
+            "article": "!nl! - KORTPARKEREN",
+            "articleRegulation": "",
+            "attendant": "TRADELEC INTL",
+            "camera": null,
+            "cityOfOffense": "KORTRIJK",
+            "created_at": 1483524847726,
+            "dateOfOffense": 1483524317000,
+            "hitrate": null,
+            "id": 84873,
+            "licensePlate": "P30",
+            "observer": "1013",
+            "person": null,
+            "reference": "170048000265",
+            "state": "IN_PROGRESS",
+            "streetOfOffense": "KONING ALBERTSTRAAT(KOR)",
+            "type": "Extra kortparkeren",
+            "typeId": 7,
+            "vehicle_nationality": "BELGIE"
+        }
+    ],
+    "metaData": {
+        "numberOfPages": 1528,
+        "total": 15274
+    }
+}</msg>
+<status status="PASS" endtime="20170215 20:42:40.316" starttime="20170215 20:42:40.316"></status>
 </kw>
 <tags>
-<tag>udutch</tag>
+<tag>test2</tag>
 </tags>
-<status status="PASS" endtime="20170205 19:44:29.309" critical="yes" starttime="20170205 19:44:13.471"></status>
+<status status="PASS" endtime="20170215 20:42:40.316" critical="yes" starttime="20170215 20:42:40.222"></status>
 </test>
-<status status="PASS" endtime="20170205 19:44:29.314" starttime="20170205 19:44:13.351"></status>
+<doc>These are some API tests</doc>
+<status status="PASS" endtime="20170215 20:42:40.318" starttime="20170215 20:42:40.074"></status>
 </suite>
 <statistics>
 <total>
@@ -220,10 +354,10 @@
 <stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
-<stat fail="0" pass="1">udutch</stat>
+<stat fail="0" pass="1">test2</stat>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Intouchpoc" pass="1">Intouchpoc</stat>
+<stat fail="0" id="s1" name="RESTpoc" pass="1">RESTpoc</stat>
 </suite>
 </statistics>
 <errors>

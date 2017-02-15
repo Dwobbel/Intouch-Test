@@ -101,7 +101,7 @@ Check all headers
     ParkingObslist.ahLand overtreder
 
 Enable all columns
-    click element  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[2]
+    click element  css=button[class='btn dropdown-toggle btn-default ng-binding']
     click element  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[2]/ul/li[5]
     click element  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[2]/ul/li[12]
     click element  xpath=/html/body/div[1]/section/div/div/div/it-container/div/div[3]/div/div[1]/bt-grid/div[2]/ul/li[13]
